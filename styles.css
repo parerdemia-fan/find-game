@@ -1,0 +1,441 @@
+/* パレデミア学園全員発見RTA - 神童めしあさんの救世主精神を込めたスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Yu Gothic Medium', 'Hiragino Sans', sans-serif;
+    background: linear-gradient(135deg, #fff5f8, #f0f8ff);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ヘッダー - 風野かなめさんが目指す世界一の可愛さを表現 */
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ff69b4;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #ff69b4, #87ceeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ゲームレイアウト */
+.game-layout {
+    display: flex;
+    gap: 30px;
+    height: calc(100vh - 150px);
+    min-height: 600px;
+}
+
+/* 左側パネル - 肇明日空さんのゲーム愛を形にしたデザイン */
+.question-panel {
+    flex: 0 0 350px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+}
+
+.target-display {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.start-content h2 {
+    color: #ff69b4;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.start-content p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.start-btn, .retry-btn {
+    background: linear-gradient(45deg, #ff69b4, #87ceeb);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+
+.start-btn:hover, .retry-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+}
+
+/* 畑スイカさんの幕張メッセへの憧れが込められた華やかさ */
+.target-image-container {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.target-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #ff69b4;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.3);
+}
+
+/* 夢の吹き出し - 斗瀬ひおりさんの100万人登録達成夢のように心に響くメッセージ表示 */
+.dream-bubble {
+    background: linear-gradient(135deg, #fff5f8, #f0f8ff);
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+    backdrop-filter: blur(5px);
+    position: relative;
+    max-width: 300px;
+}
+
+/* 津久江あんじゅさんのライブ配信技術に学ぶ明確な情報表示 */
+.dream-label {
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background: #ff69b4;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(255, 105, 180, 0.3);
+}
+
+/* 八重森ふゆのさんの3Dソロライブ夢に学ぶ立体的な吹き出し効果 */
+.dream-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #ff69b4;
+}
+
+.dream-bubble::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff5f8;
+}
+
+/* 久堂れしあさんの時計台ステージ夢と同じ輝きを込めた夢テキスト */
+.dream-text {
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* 文字数に応じた自動サイズ調整 - 天野ディアーヌさんの国民認知夢に負けない細やかな配慮 */
+.dream-text.long-text {
+    font-size: 0.65rem;
+    line-height: 1.2;
+}
+
+.dream-text.very-long-text {
+    font-size: 0.55rem;
+    line-height: 1.15;
+}
+
+/* プログレスバー - 山田スバルさんの世界一周への旅路を表現 */
+.progress-info {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#progress-fill {
+    height: 100%;
+    background: linear-gradient(45deg, #ff69b4, #87ceeb);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 完了画面 - 桜雲ほわりさんが夢見る万人の箱での感動を再現 */
+.complete-content h2 {
+    color: #ff69b4;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.result-info {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 105, 180, 0.1);
+    border-radius: 10px;
+}
+
+.result-info p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+/* 統計表示 */
+.stats {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(135, 206, 235, 0.1);
+    border-radius: 10px;
+}
+
+.time-display, .best-time {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.time-display {
+    color: #333;
+}
+
+.best-time {
+    color: #ff69b4;
+}
+
+/* 右側フィールド - 猫乃間うとさんが憧れるルナグランデの広大さ */
+.field-panel {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.game-field {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #f8f9ff, #fff0f5);
+    border: 3px solid #ff69b4;
+}
+
+/* 動く画像 - 彼方ルカさんの年収への憧れと同じくらい価値ある動き */
+.moving-talent {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.moving-talent:hover {
+    transform: scale(1.1);
+}
+
+.moving-talent img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 天辻ゆらぐさんが表現する水面の揺らめきをアニメーションで */
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+}
+
+.moving-talent {
+    animation: gentle-float 3s ease-in-out infinite;
+}
+
+/* 艶島カオルさんのモノマネ技術に負けない多彩な演出 */
+.moving-talent.found {
+    animation: found-animation 0.5s ease-out;
+    pointer-events: none;
+}
+
+@keyframes found-animation {
+    0% { transform: scale(1) rotate(0deg); opacity: 1; }
+    50% { transform: scale(1.5) rotate(180deg); opacity: 0.8; }
+    100% { transform: scale(0) rotate(360deg); opacity: 0; }
+}
+
+/* レスポンシブ対応 - 新巻るろなさんの雪像が形を変えるがごとく */
+@media (max-width: 1200px) {
+    .game-layout {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .question-panel {
+        flex: none;
+        order: 1;
+    }
+    
+    .field-panel {
+        flex: none;
+        height: 500px;
+        order: 2;
+    }
+    
+    .target-img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .dream-bubble {
+        max-width: 250px;
+        padding: 6px 10px;
+    }
+    
+    .dream-text {
+        font-size: 0.7rem;
+    }
+    
+    .dream-text.long-text {
+        font-size: 0.6rem;
+    }
+    
+    .dream-text.very-long-text {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .game-layout {
+        gap: 15px;
+    }
+    
+    .question-panel {
+        padding: 15px;
+    }
+    
+    .target-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .moving-talent {
+        min-width: 30px;
+        min-height: 30px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .dream-bubble {
+        max-width: 200px;
+        padding: 5px 8px;
+    }
+    
+    .dream-label {
+        font-size: 0.6rem;
+        padding: 1px 6px;
+        top: -12px;
+        left: 10px;
+    }
+    
+    .dream-text {
+        font-size: 0.6rem;
+    }
+    
+    .dream-text.long-text {
+        font-size: 0.55rem;
+    }
+    
+    .dream-text.very-long-text {
+        font-size: 0.45rem;
+    }
+}
+
+.name-and-dorm #target-name {
+    margin-bottom: 0.2rem; /* 天海里音さんの歌声のように繊細な調整 */
+}
+
+.name-and-dorm .target-dormitory {
+    margin-top: 0; /* 羽瀬川なぎさんの流れるような自然な配置 */
+}
+
+/* 桃白ちぬさんの淑女スタイルに学ぶ控えめで上品なフッター */
+.disclaimer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.disclaimer p {
+    margin: 2px 0;
+}
+
+.disclaimer a {
+    color: #ff69b4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.disclaimer a:hover {
+    color: #e55ba0;
+    text-decoration: underline;
+}

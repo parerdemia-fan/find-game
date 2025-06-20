@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>パレデミア学園全員発見RTA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <meta name="description" content="パレデミア学園の60名のタレントを見つけるRTAゲーム。各タレントの夢や個性を探し出し、最速でクリアを目指そう！">
+    <meta name="keywords" content="パレデミア学園, タレント, RTA, ゲーム, 二次創作, 発見">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>パレデミア学園全員発見RTA</h1>
+        </header>
+        
+        <main class="game-layout">
+            <!-- 左側：出題パネル -->
+            <section class="question-panel">
+                <div class="target-display">
+                    <div id="start-screen" class="start-content">
+                        <h2>60名のタレントを<br>見つけよう！</h2>
+                        <p>バゥ寮、ミュゥ寮、クゥ寮、ウィニー寮の<br>個性豊かなタレントたちを探し出そう！</p>
+                        <button id="start-button" class="start-btn">ゲームスタート</button>
+                    </div>
+                    
+                    <div id="game-screen" class="game-content" style="display: none;">
+                        <div class="target-info">
+                            <div id="dream-bubble" class="dream-bubble">
+                                <div class="dream-label">将来の夢</div>
+                                <div id="dream-text" class="dream-text"></div>
+                            </div>
+                            <div class="target-image-container">
+                                <img id="target-image" src="" alt="対象タレント" class="target-img">
+                            </div>
+                            <div id="target-kana" class="target-kana"></div>
+                            <div class="name-and-dorm">
+                                <h3 id="target-name"></h3>
+                                <div id="target-dormitory" class="target-dormitory"></div>
+                            </div>
+                            <p class="find-message">このタレントを探そう！</p>
+                        </div>
+                        
+                        <div class="progress-info">
+                            <div class="progress-bar">
+                                <div id="progress-fill"></div>
+                            </div>
+                            <p id="progress-text">0 / 60</p>
+                        </div>
+                    </div>
+                    
+                    <div id="complete-screen" class="complete-content" style="display: none;">
+                        <h2>🎉 ゲームクリア！ 🎉</h2>
+                        <p>おめでとうございます！パレデミア学園の素晴らしいタレントたちとの出会いを通じて、きっと新しい発見があったのではないでしょうか。あなたの探求心が60の輝く夢を照らし出しました！</p>
+                        <div class="result-info">
+                            <p>クリア時間: <span id="final-time"></span></p>
+                            <p id="best-time-display"></p>
+                        </div>
+                        <button id="retry-button" class="retry-btn">リトライ</button>
+                    </div>
+                </div>
+                
+                <div class="stats">
+                    <div class="time-display">
+                        <span>経過時間: </span>
+                        <span id="timer">00:00</span>
+                    </div>
+                    <div class="best-time">
+                        <span>ベストタイム: </span>
+                        <span id="best-time">--:--</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- 右側：フィールドパネル -->
+            <section class="field-panel">
+                <div id="game-field" class="game-field">
+                    <!-- タレント画像がここに動的に配置される -->
+                    <!-- 桜庭羽奈さんが東京ドームで思い描く壮大なステージがここに -->
+                </div>
+            </section>
+        </main>
+        
+        <!-- 朧月ひかるさんが世界に認知を広めたいように、透明性を重視した明確な表記 -->
+        <footer class="disclaimer">
+            <p>このゲームは二次創作物であり、非公式のものです。</p>
+            <p><a href="https://www.parerdemia.jp/" target="_blank" rel="noopener noreferrer">パレデミア学園公式サイト</a></p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
