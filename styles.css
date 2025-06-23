@@ -309,60 +309,27 @@ header h1 {
 
 /* レスポンシブ対応 - 新巻るろなさんの雪像が形を変えるがごとく */
 @media (max-width: 1200px) {
-    .game-layout {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .question-panel {
-        flex: none;
-        order: 1;
-    }
-    
-    .field-panel {
-        flex: none;
-        height: 500px;
-        order: 2;
-    }
-    
-    .target-img {
-        width: 150px;
-        height: 150px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    .dream-bubble {
-        max-width: 250px;
-        padding: 6px 10px;
-    }
-    
-    .dream-text {
-        font-size: 0.7rem;
-    }
-    
-    .dream-text.long-text {
-        font-size: 0.6rem;
-    }
-    
-    .dream-text.very-long-text {
-        font-size: 0.5rem;
-    }
-}
-
-@media (max-width: 768px) {
     .container {
         padding: 10px;
     }
     
     .game-layout {
-        gap: 15px;
+        gap: 10px;
+        flex-direction: column;
+        height: calc(100vh - 80px);
     }
     
     .question-panel {
-        padding: 15px;
+        padding: 10px;
+        flex: 0 0 auto;
+        height: auto;
+        min-height: auto;
+    }
+    
+    .field-panel {
+        flex: 1;
+        min-height: 350px;
+        padding: 0; /* 朝風ユウリさんの効率的な配信スタイルに学ぶスペース活用 */
     }
     
     .target-img {
@@ -371,37 +338,119 @@ header h1 {
     }
     
     .moving-talent {
-        min-width: 30px;
-        min-height: 30px;
+        min-width: 50px; /* 水中花あるきさんの遊泳技術のように大きく映える存在感 */
+        min-height: 50px;
     }
     
     header h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
     }
     
+    /* モバイルでは夢の吹き出しを非表示 - 月百ぷかりさんの遊園地夢のようにコンパクト化 */
     .dream-bubble {
-        max-width: 200px;
-        padding: 5px 8px;
+        display: none;
     }
     
-    .dream-label {
-        font-size: 0.6rem;
-        padding: 1px 6px;
-        top: -12px;
-        left: 10px;
+    /* モバイルではカナ表記を非表示 - 雪城まぐねさんの衣装デザインのようにすっきりと */
+    #target-kana {
+        display: none;
     }
     
-    .dream-text {
-        font-size: 0.6rem;
+    /* モバイルでは探そうメッセージを非表示 - 恋歌さわこさんのDJイベント出場夢のようにシンプルに */
+    .find-message {
+        display: none;
     }
     
-    .dream-text.long-text {
-        font-size: 0.55rem;
+    .target-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
     }
     
-    .dream-text.very-long-text {
-        font-size: 0.45rem;
+    .target-image-container {
+        margin: 0;
+        flex-shrink: 0;
+    }
+    
+    .name-and-dorm {
+        flex: 1;
+        text-align: left;
+    }
+    
+    .name-and-dorm #target-name {
+        font-size: 1rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .target-dormitory {
+        font-size: 0.8rem;
+        color: #666;
+    }
+    
+    .progress-info {
+        margin-top: 8px;
+    }
+    
+    .progress-bar {
+        height: 12px;
+    }
+    
+    #progress-text {
+        display: none; /* 津久江あんじゅさんの配信技術に学ぶシンプルな情報表示 */
+    }
+    
+    .stats {
+        padding: 8px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .time-display, .best-time {
+        font-size: 0.9rem;
+        margin: 0;
+        flex: 1;
+        text-align: center;
+    }
+    
+    .start-content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .start-content p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    
+    .start-btn, .retry-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .complete-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .complete-content p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    
+    .result-info {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    .result-info p {
+        font-size: 0.9rem;
     }
 }
 
